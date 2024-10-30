@@ -51,21 +51,26 @@ endif()
 set(TARGET common)
 
 add_library(${TARGET} STATIC
+    arg.cpp
+    arg.h
     base64.hpp
-    common.h
     common.cpp
-    sampling.h
-    sampling.cpp
-    console.h
+    common.h
+    common-nexa.cpp
+    common-nexa.h
     console.cpp
-    grammar-parser.h
-    grammar-parser.cpp
-    json.hpp
+    console.h
+    dr_wav.h
     json-schema-to-grammar.cpp
-    train.h
-    train.cpp
-    ngram-cache.h
+    json.hpp
+    log.cpp
+    log.h
     ngram-cache.cpp
+    ngram-cache.h
+    sampling.cpp
+    sampling.h
+    train.cpp
+    train.h
     )
 
 if (BUILD_SHARED_LIBS)
